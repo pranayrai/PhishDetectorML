@@ -1,0 +1,30 @@
+{% extends 'PhishDetectorMLv1/base.html' %}
+
+{% block content %}
+
+    <div class="wrapper wrapper--w900">
+
+            <div class="card card-6">
+                <div class="card-body">
+
+                    <form method="POST" action="results.html">
+                        {%  csrf_token %}
+                        <div class="row row-space">
+                            <div class="col-5">
+                                <div class="input-group">
+                                    {{ form.url }}
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <button class="btn-submit m-b-0" type="submit">Detect</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div> <!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+{% endblock %}
